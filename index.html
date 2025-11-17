@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srija | Portfolio</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #121212;
+            --bg2: #1c1c1c;
+            --accent: #ff7ae0;
+            --accent2: #7ab8ff;
+            --text: #f5f5f5;
+            --muted: #bdbdbd;
+            --card: #1e1e1e;
+            --shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: "Poppins", sans-serif; }
+
+        /* NEW LAYOUT: LEFT SIDEBAR */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 320px;
+            background: var(--card);
+            padding: 40px 20px;
+            position: fixed;
+            top: 0; left: 0;
+            bottom: 0;
+            box-shadow: var(--shadow);
+        }
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            display: block;
+            margin: 0 auto;
+        }
+        .sidebar h1 {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+        .sidebar p {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 5px;
+        }
+        .side-links {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .side-links a {
+            text-decoration: none;
+            color: var(--text);
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .side-links a:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        /* MAIN */
+        main {
+            margin-left: 350px;
+            padding: 60px 40px;
+        }
+        section {
+            margin-bottom: 90px;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg,var(--accent),var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ABOUT (NOW FIRST IN MAIN) */
+        .about-box {
+            background: var(--bg2);
+            padding: 25px;
+            border-radius: 15px;
+            line-height: 1.7;
+            box-shadow: var(--shadow);
+        }
+
+        /* SKILLS SECTION (NOW IN 3-COLUMN TAG STYLE) */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+            gap: 18px;
+        }
+        .skill {
+            background: var(--card);
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            transition: .3s;
+            border-bottom: 3px solid var(--accent);
+        }
+        .skill:hover {
+            background: var(--accent);
+            color: #000;
+            transform: translateY(-5px);
+        }
+
+        /* PROJECTS (NOW LARGE HORIZONTAL CARDS) */
+        .project {
+            background: var(--card);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            box-shadow: var(--shadow);
+            transition: .4s;
+        }
+        .project:hover { transform: translateX(10px); }
+        .project img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .project h3 { color: var(--accent2); margin-bottom: 10px; }
+
+        /* EDUCATION (TIMELINE FORMAT) */
+        .timeline {
+            border-left: 3px solid var(--accent);
+            padding-left: 25px;
+        }
+        .edu {
+            margin-bottom: 25px;
+        }
+        .edu h4 {
+            font-size: 1.2rem;
+            color: var(--accent2);
+        }
+        .edu p { color: var(--muted); margin-top: 5px; }
+
+        /* CONTACT */
+        .contact a {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 2px solid var(--accent2);
+            margin: 8px;
+            border-radius: 25px;
+            text-decoration:none;
+            color: var(--accent2);
+            transition:.3s;
+        }
+        .contact a:hover {
+            background: var(--accent2);
+            color:#000;
+        }
+
+        @media(max-width:900px){
+            .sidebar{position:relative;width:100%;}
+            main{margin-left:0;margin-top:30px;}
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR - NEW FORMAT -->
+    <div class="sidebar">
+        <img src="./image/srija pic.jpg" alt="Profile" />
+        <h1>Srija</h1>
+        <p>Web Developer • ML Practitioner</p>
+
+        <div class="side-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ABOUT FIRST -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-box">
+                I am a creative and detail-oriented web developer with experience in machine learning,
+                Python development, and frontend design. I specialize in building responsive, modern,
+                and user‑friendly websites.
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Java</div>
+                <div class="skill">C Programming</div>
+                <div class="skill">Python</div>
+                <div class="skill">Machine Learning</div>
+                <div class="skill">Pandas</div>
+                <div class="skill">NumPy</div>
+                <div class="skill">Keras</div>
+                <div class="skill">Scikit-Learn</div>
+                <div class="skill">Flask</div>
+                <div class="skill">GitHub</div>
+            </div>
+        </section>
+
+        <!-- PROJECTS NOW WIDE CARDS -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <img src="./image/ChatGPT Image Nov 17, 2025, 09_54_37 PM.png" />
+                <div>
+                    <h3>Prediction ML Models</h3>
+                    <p>Developed ML models using Python & Keras for diabetes diagnosis and housing price prediction.</p>
+                </div>
+            </div><br>
+
+            <div class="project">
+                <img src="./image/ChatGPT Image Nov 17, 2025, 09_57_51 PM.png" />
+                <div>
+                    <h3>Flask Deployment</h3>
+                    <p>Created and deployed ML systems using Flask with complete project workflow documentation.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- EDUCATION IN TIMELINE FORMAT -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="timeline">
+                <div class="edu">
+                    <h4>SR University — B.Tech (2023–2027)</h4>
+                    <p>Current undergraduate student specializing in web technologies.</p>
+                </div>
+                <div class="edu">
+                    <h4>Ekashila CBSE / State Schools (2016–2020)</h4>
+                    <p>Completed secondary education with strong academic performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact">
+                <a href="mailto:sambarajusrijaa@gmail.com">Email</a>
+                <a href="tel:7386258808">Call</a>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
